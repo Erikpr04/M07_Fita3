@@ -14,11 +14,12 @@
 if(isset($_POST["text"])) {
     $content = file_get_contents("ex33.txt");
     $fp = fopen("ex33.txt", "w");
-    fwrite($fp, $content . $_POST["text"]. "-");
+    fwrite($fp, $content . $_POST["text"]. "\n");
     fclose($fp);
 }
 
-echo file_get_contents("ex33.txt")
+echo str_replace("\n","<br>",file_get_contents("ex33.txt"));
+
 ?>
 
 <form action="ex33pagina1.php" method="POST">
