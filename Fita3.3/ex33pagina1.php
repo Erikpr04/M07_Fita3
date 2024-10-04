@@ -18,7 +18,7 @@ if(isset($_POST["text"])) {
     fclose($fp);
 }
 
-echo str_replace("\n","<br>",file_get_contents("ex33.txt"));
+echo str_replace("\n","<hr>",file_get_contents("ex33.txt"));
 
 ?>
 
